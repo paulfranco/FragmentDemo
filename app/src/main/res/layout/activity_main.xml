@@ -3,19 +3,29 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#0f0">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="co.paulfran.paulfranco.fragmentdemo.HelloFragment"
+    <!-- There are 2 Methods of adding fragments 1. is to add it to the XML file like this. 2. Is to add it programmatically -->
+    <!-- we are commenting out this fragment because we will be adding it programmatically in MainActivity -->
+    <!--<fragment -->
+        <!-- android:id="@+id/fragment" -->
+        <!-- android:name="co.paulfran.paulfranco.fragmentdemo.HelloFragment" -->
+        <!--android:layout_width="wrap_content" -->
+        <!--android:layout_height="wrap_content" -->
+        <!--android:layout_centerVertical="true" -->
+        <!--android:layout_centerHorizontal="true" -->
+        <!--tools:layout_editor_absoluteX="161dp" -->
+        <!--tools:layout_editor_absoluteY="193dp" /> -->
+
+    <!-- Use frame layout at center of the relative layout to add the fragment in it therefore placing the fragment at the center of the screen -->
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="193dp" />
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
